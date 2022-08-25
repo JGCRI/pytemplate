@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-import basd.config as cfg
+import pytemplate.config as cfg
 
 
 class TestConfig(unittest.TestCase):

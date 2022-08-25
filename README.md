@@ -69,7 +69,12 @@ make html
 
 This will build the website here:  `docs/build/html`  You can open this locally by double-clicking the `index.html` file.  Ultimately, the contents of the `docs/build/html` directory will be hosted on a separate `gh-pages` branch as we only want to keep the source docs in the code branches.  To setup a webpage after building your docs, do the following:
 
-- 
+- Create a branch named `gh-pages` from what you have on `main`
+- In your GitHub repo, navigate to `Settings` -> `Pages` and ensure that `Source` is set to `Deploy from branch` and that `gh-pages` is selected as the branch and that `/root` is the target directory.
+- Copy the `docs/build/html` directory somewhere else on your machine (e.g., Desktop)
+- Pull your new branch to your local repo via `git pull --all`, navigate to the root directory of your repository, and change branches to `gh-pages` (e.g., `git checkout gh-pages`)
+- Remove everything from your repo when on the `gh-pages` branch.
+- Copy the contents of the `html` directory you copied into the repo.
 
 #### Your GitHub Actions
 
