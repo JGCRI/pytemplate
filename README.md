@@ -1,4 +1,4 @@
-
+[![build](https://github.com/JGCRI/pytemplate/actions/workflows/build.yml/badge.svg)](https://github.com/JGCRI/pytemplate/actions/workflows/build.yml) 
 
 ## pytemplate
 
@@ -75,14 +75,23 @@ This will build the website here:  `docs/build/html`  You can open this locally 
 - Pull your new branch to your local repo via `git pull --all`, navigate to the root directory of your repository, and change branches to `gh-pages` (e.g., `git checkout gh-pages`)
 - Remove everything from your repo when on the `gh-pages` branch.
 - Copy the contents of the `html` directory you copied into the repo.
+- Add an empty file named `.nojekyll` to the root directory with the HTML contents.
+- Add, commit, and push this to `gh-pages`.
+- Change directories back to `main` or your working branch.
+
+If you navigate back to `Settings` -> `Pages` you will now see your web address that has been deployed.  This repos is:  https://jgcri.github.io/pytemplate/
+Copy this address and navigate back the main GitHub repo page (e.g., https://github.com/JGCRI/pytemplate).  Click the gear in the `About` section in the top right of your page, paste in the link to your webpage, and click `Save changes`.
+
+You now have a live documentation web page!  You can build custom sections that you can link to in the main README (these now only contain links to Goggle).
 
 #### Your GitHub Actions
 
+Your tests in the package will run via continuous integration from the `build.yml` action.  This is linked to the badge in your README.
 
 #### Modifying your JOSS paper
 
-
-
+I put a sample JOSS paper, bibliography, and figure in a directory named `paper` in the root.  This gets compiled to a PDF file so you can check formatting via this GitHub action:  `.github/workflows/draft-pdf.yml which creates a PDF as an artifact that you can download in the action.
+This paper includes sample referencing as well.
 
 ### Purpose
 
