@@ -1,7 +1,7 @@
-[![build](https://github.com/JGCRI/bed/actions/workflows/build.yml/badge.svg)](https://github.com/JGCRI/bed/actions/workflows/build.yml)
-[![docs](https://github.com/JGCRI/bed/actions/workflows/docs.yml/badge.svg)](https://github.com/JGCRI/bed/actions/workflows/docs.yml)
-[![tests](https://github.com/JGCRI/bed/actions/workflows/test.yml/badge.svg)](https://github.com/JGCRI/bed/actions/workflows/test.yml)
-[![codecov](https://codecov.io/gh/JGCRI/bed/branch/main/graph/badge.svg?token=2EWDAQI07B)](https://codecov.io/gh/JGCRI/bed)
+[![build](https://github.com/JGCRI/pytemplate/actions/workflows/build.yml/badge.svg)](https://github.com/JGCRI/pytemplate/actions/workflows/build.yml)
+[![docs](https://github.com/JGCRI/pytemplate/actions/workflows/docs.yml/badge.svg)](https://github.com/JGCRI/pytemplate/actions/workflows/docs.yml)
+[![tests](https://github.com/JGCRI/pytemplate/actions/workflows/test.yml/badge.svg)](https://github.com/JGCRI/pytemplate/actions/workflows/test.yml)
+[![codecov](https://codecov.io/gh/JGCRI/pytemplate/branch/main/graph/badge.svg?token=2EWDAQI07B)](https://codecov.io/gh/JGCRI/pytemplate)
 
 # Introduction
 

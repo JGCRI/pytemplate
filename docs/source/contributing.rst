@@ -1,25 +1,25 @@
 Contributing
 ========================
 
-Whether you find a typo in the documentation, find a bug, or want to develop functionality that you think will make **bed** more robust, you are welcome to contribute!
+Whether you find a typo in the documentation, find a bug, or want to develop functionality that you think will make **pytemplate** more robust, you are welcome to contribute!
 
 
 Opening issues
 ______________
 
-If you find a bug or would like to contribute a new feature, please `open an issue <https://github.com/JGCRI/bed/issues>`_.
+If you find a bug or would like to contribute a new feature, please `open an issue <https://github.com/JGCRI/pytemplate/issues>`_.
 
 
 Contribution workflow
 _____________________
 
-The following is the recommended workflow for contributing to **bed**:
+The following is the recommended workflow for contributing to **pytemplate**:
 
-1. `Fork the bed repository <https://github.com/JGCRI/bed/fork>`_ and then clone it locally:
+1. `Fork the pytemplate repository <https://github.com/JGCRI/pytemplate/fork>`_ and then clone it locally:
 
   .. code-block:: bash
 
-    git clone https://github.com/<your-user-name>/bed
+    git clone https://github.com/<your-user-name>/pytemplate
 
 
 2. Create a branch for your changes

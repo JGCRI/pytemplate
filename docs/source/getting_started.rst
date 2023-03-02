@@ -1,6 +1,6 @@
 Getting Started
 ===============
-This page walks you through the steps of installing **bed** and running an example.
+This page walks you through the steps of installing **pytemplate** and running an example.
 
 Motivation
 ----------

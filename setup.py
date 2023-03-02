@@ -9,20 +9,20 @@ def readme():
         return f.read()
 
 
-version = re.search(r"__version__ = ['\"]([^'\"]*)['\"]", open('bed/__init__.py').read(), re.M).group(1)
+version = re.search(r"__version__ = ['\"]([^'\"]*)['\"]", open('pytemplate/__init__.py').read(), re.M).group(1)
 
 setup(
-    name='bed',
+    name='pytemplate',
     version=version,
     packages=find_packages(),
-    url='https://github.com/JGCRI/bed',
+    url='https://github.com/JGCRI/pytemplate',
     license='BSD-2-Clause',
     author='I.M. Human',
     author_email='i.human@machine.domain',
     description='A template for a basic Python package with CI via GitHub actions and a JOSS paper template and action',
     long_description=readme(),
     long_description_content_type="text/markdown",
-    python_requires='>=3.8.*, <4',
+    python_requires='>=3.5, <4',
     include_package_data=True,
     install_requires=[
         "numpy>=1.23",

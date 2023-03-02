@@ -1,26 +1,26 @@
 Modules
 =======
 
-bed.model
+pytemplate.model
 -------------------
 
-.. automodule:: bed.model
+.. automodule:: pytemplate.model
    :members:
    :undoc-members:
    :show-inheritance:
 
-bed.read_data
+pytemplate.read_data
 -------------------
 
-.. automodule:: bed.read_data
+.. automodule:: pytemplate.read_data
    :members:
    :undoc-members:
    :show-inheritance:
 
-bed.demand
+pytemplate.demand
 -------------------
 
-.. automodule:: bed.demand
+.. automodule:: pytemplate.demand
    :members:
    :undoc-members:
    :show-inheritance:

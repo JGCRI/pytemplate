@@ -2,7 +2,7 @@
 
 About
 =====
-In progress *bed* ..
+In progress *pytemplate* ..
 
 .. toctree::
    :maxdepth: 2

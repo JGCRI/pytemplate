@@ -1,7 +1,7 @@
 """
 @Date:
 @authors:
-@Project: bed v0.0
+@Project: pytemplate v0.0
 
 License:  BSD 2-Clause, see LICENSE and DISCLAIMER files
 Copyright (c) 2022, Battelle Memorial Institute

@@ -11,9 +11,9 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'bed'
-copyright = '2022, I.M. Human'
-author = 'I.M. Human'
+project = 'pytemplate'
+copyright = 'JGCRI'
+author = 'JGCRI'
 release = '0.0.0'
 
 # -- General configuration ---------------------------------------------------
