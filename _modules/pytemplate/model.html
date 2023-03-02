@@ -76,26 +76,18 @@
            <div itemprop="articleBody">
              
   <h1>Source code for pytemplate.model</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">@Date:</span>
-<span class="sd">@authors:</span>
-<span class="sd">@Project: pytemplate v0.0</span>
-
-<span class="sd">License:  BSD 2-Clause, see LICENSE and DISCLAIMER files</span>
-<span class="sd">Copyright (c) 2022, Battelle Memorial Institute</span>
-
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="kn">from</span> <span class="nn">pytemplate.read_config</span> <span class="kn">import</span> <span class="n">read_config</span>
+<span></span><span class="kn">from</span> <span class="nn">pytemplate.read_config</span> <span class="kn">import</span> <span class="n">read_config</span>
 <span class="kn">from</span> <span class="nn">pytemplate.method</span> <span class="kn">import</span> <span class="n">method</span>
-
+<span class="kn">import</span> <span class="nn">logging</span>
 
 <div class="viewcode-block" id="Pytemplate"><a class="viewcode-back" href="../../modules.html#pytemplate.model.Pytemplate">[docs]</a><span class="k">class</span> <span class="nc">Pytemplate</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Model wrapper for pytemplate&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_file</span><span class="o">=</span><span class="s1">&#39;config&#39;</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">var1</span> <span class="o">=</span> <span class="mf">0.125</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_file</span><span class="o">=</span><span class="s2">&quot;example_config.yml&quot;</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Starting Pytemplate model.&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">=</span> <span class="mi">5</span>        <span class="c1"># Example constant to set within Pytemplate class</span>
 
         <span class="c1"># Read in Config File</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">read_config</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
@@ -103,18 +95,19 @@
         <span class="c1"># Read data</span>
         <span class="c1"># self.data = read_data(self.config)</span>
 
-        <span class="c1"># Calculate building energy demand</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span><span class="p">()</span></div>
-        <span class="c1"># self.demand_cool = demand(self.data, type = &quot;cool&quot;)</span>
+        <span class="c1"># Run main method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span><span class="p">()</span>
 
-        <span class="c1"># diagnostics</span>
+        <span class="c1"># Run diagnostics</span>
         <span class="c1"># diagnostics()</span>
 
-        <span class="c1"># write outputs</span>
+        <span class="c1"># Write outputs</span>
         <span class="c1"># write_outputs()</span>
 
         <span class="c1"># clean up and close</span>
         <span class="c1"># clean_up()</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Pytemplate model run complete.&#39;</span><span class="p">)</span></div>
 </pre></div>
 
            </div>
@@ -124,7 +117,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright JGCRI.</p>
+    <p>&#169; Copyright JGCRI 2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

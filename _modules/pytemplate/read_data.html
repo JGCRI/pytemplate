@@ -78,44 +78,26 @@
   <h1>Source code for pytemplate.read_data</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">logging</span>
 
-<span class="c1"># Inputs needed:</span>
-<span class="c1">#   k unitless calibration coefficient</span>
-<span class="c1">#   HDH heating degree hours</span>
-<span class="c1">#   CDH cooling degree hours</span>
-<span class="c1">#   n = thermal conductance (GJ/m2 hour C)</span>
-<span class="c1">#   R = unitless average surface-to-floor area ratio</span>
-<span class="c1">#   IG internal gain [GJ/m2]</span>
-<span class="c1">#   uh = region and sector-specific demand satition for heating</span>
-<span class="c1">#   uc = region and sector-specific demand satition for cooling</span>
-<span class="c1">#   i = per-capita income</span>
-<span class="c1">#   Ph = total price of service (weighted average of technologies used) heating</span>
-<span class="c1">#   Pc = total price of service (weighted average of technologies used) cooling</span>
 
-<div class="viewcode-block" id="fake"><a class="viewcode-back" href="../../modules.html#pytemplate.read_data.fake">[docs]</a><span class="k">def</span> <span class="nf">fake</span><span class="p">(</span><span class="n">fake_param</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fake function to remove.</span>
+<div class="viewcode-block" id="read_data"><a class="viewcode-back" href="../../modules.html#pytemplate.read_data.read_data">[docs]</a><span class="k">def</span> <span class="nf">read_data</span><span class="p">(</span><span class="n">read_data_param_1</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">read_data_param_2</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Example function read_data</span>
 
-<span class="sd">    :param fake_param:                          A fake integer</span>
-<span class="sd">    :type fake_param:                           int</span>
+<span class="sd">    :param read_data_param_1:                    Description of param (Units)</span>
+<span class="sd">    :type read_data_param_1:                     int</span>
+<span class="sd">    :param read_data_param_2:                    Description of param (Units)</span>
+<span class="sd">    :type read_data_param_2:                     int</span>
 
-<span class="sd">    :return:                                    boolean value</span>
+<span class="sd">    :return:                                    int output value</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">return</span> <span class="kc">True</span></div>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Starting function read_data.&#39;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="fake2"><a class="viewcode-back" href="../../modules.html#pytemplate.read_data.fake2">[docs]</a><span class="k">def</span> <span class="nf">fake2</span><span class="p">(</span><span class="n">fake_param</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fake function to remove.</span>
+    <span class="n">read_data_output</span> <span class="o">=</span> <span class="n">read_data_param_1</span> <span class="o">*</span> <span class="n">read_data_param_2</span>
 
-<span class="sd">    :param fake_param:                          A fake integer</span>
-<span class="sd">    :type fake_param:                           int</span>
+    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Function read_data completed.&#39;</span><span class="p">)</span>
 
-<span class="sd">    :return:                                    boolean value</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;This is a log file for fake 2&#39;</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="kc">True</span></div>
+    <span class="k">return</span> <span class="n">read_data_output</span></div>
 </pre></div>
 
            </div>
@@ -125,7 +107,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright JGCRI.</p>
+    <p>&#169; Copyright JGCRI 2023.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
