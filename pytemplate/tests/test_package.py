@@ -15,7 +15,7 @@ def test_diagnostics():
     test diagnostics function
     :return:
     """
-    assert pytemplate.clean_up(2,2) == 4
+    assert pytemplate.diagnostics(2,2) == 4
 
 def test_method():
     """
