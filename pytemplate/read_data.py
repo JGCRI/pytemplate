@@ -1,40 +1,22 @@
 import logging
 
-# Inputs needed:
-#   k unitless calibration coefficient
-#   HDH heating degree hours
-#   CDH cooling degree hours
-#   n = thermal conductance (GJ/m2 hour C)
-#   R = unitless average surface-to-floor area ratio
-#   IG internal gain [GJ/m2]
-#   uh = region and sector-specific demand satition for heating
-#   uc = region and sector-specific demand satition for cooling
-#   i = per-capita income
-#   Ph = total price of service (weighted average of technologies used) heating
-#   Pc = total price of service (weighted average of technologies used) cooling
 
-def fake(fake_param: int = 1):
-    """Fake function to remove.
+def read_data(read_data_param_1=1,read_data_param_2=1.0):
+    """Example function read_data
 
-    :param fake_param:                          A fake integer
-    :type fake_param:                           int
+    :param read_data_param_1:                    Description of param (Units)
+    :type read_data_param_1:                     int
+    :param read_data_param_2:                    Description of param (Units)
+    :type read_data_param_2:                     int
 
-    :return:                                    boolean value
+    :return:                                    int output value
 
     """
 
-    return True
+    logging.info('Starting function read_data.')
 
-def fake2(fake_param: int = 1):
-    """Fake function to remove.
+    read_data_output = read_data_param_1 * read_data_param_2
 
-    :param fake_param:                          A fake integer
-    :type fake_param:                           int
+    logging.info('Function read_data completed.')
 
-    :return:                                    boolean value
-
-    """
-
-    logging.info('This is a log file for fake 2')
-
-    return True
+    return read_data_output

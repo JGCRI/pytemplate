@@ -1,27 +1,22 @@
 import logging
 
-def fake(fake_param: int = 1):
-    """Fake function to remove.
 
-    :param fake_param:                          A fake integer
-    :type fake_param:                           int
+def diagnostics(diagnostics_param_1=1,diagnostics_param_2=1.0):
+    """Example function diagnostics
 
-    :return:                                    boolean value
+    :param diagnostics_param_1:                    Description of param (Units)
+    :type diagnostics_param_1:                     int
+    :param diagnostics_param_2:                    Description of param (Units)
+    :type diagnostics_param_2:                     int
 
-    """
-
-    return True
-
-def fake2(fake_param: int = 1):
-    """Fake function to remove.
-
-    :param fake_param:                          A fake integer
-    :type fake_param:                           int
-
-    :return:                                    boolean value
+    :return:                                    int output value
 
     """
 
-    logging.info('This is a log file for fake 2')
+    logging.info('Starting function diagnostics.')
 
-    return True
+    diagnostics_output = diagnostics_param_1 * diagnostics_param_2
+
+    logging.info('Function method completed.')
+
+    return diagnostics_output

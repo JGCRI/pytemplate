@@ -1,21 +1,21 @@
-"""
-@Date:
-@authors:
-@Project: pytemplate v0.0
+import os
+import logging
 
-License:  BSD 2-Clause, see LICENSE and DISCLAIMER files
-Copyright (c) 2022, Battelle Memorial Institute
-
-"""
-
-def read_config(config_file):
+def read_config(config_file="example_config.yml"):
     """
     Read configuration file.
 
-    :param config_file:         string for configuration file path
+    :param config_file:         configuration file path
+    :type config_file:          string
     :return:
     """
 
-    var = config_file
+    logging.info('Starting function read_config...')
 
-    return var
+    path_to_config = os.path.abspath(config_file)
+    file_exists = os.path.exists(path_to_config)
+    logging.info(f'config_file {path_to_config} exists: {file_exists}')
+
+    logging.info('Function read_config complete.')
+
+    return path_to_config

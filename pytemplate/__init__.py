@@ -4,7 +4,7 @@ from .read_data import *
 from .method import *
 from .diagnostics import *
 from .clean_up import *
-from .tests.test_config import *
+from .tests.test_package import *
 from .logger import *
 
 __version__ = "0.0.0"

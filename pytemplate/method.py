@@ -1,19 +1,22 @@
 import logging
-import numpy
 
 
-# method
+def method(method_param_1=1,method_param_2=1.0):
+    """Example function method
 
-def method(param_1=1, param_2=1):
-    """
-    :param param_1:             Description of param_1 (Units)
-    :param param_2:             Description of param_1 (Units)
+    :param method_param_1:                    Description of param (Units)
+    :type method_param_1:                     int
+    :param method_param_2:                    Description of param (Units)
+    :type method_param_2:                     int
+
+    :return:                                    int output value
+
     """
 
     logging.info('Starting function method.')
 
-    method_output = param_1 * param_2
+    method_output = method_param_1 * method_param_2
 
-    logging.info('Function demand completed.')
+    logging.info('Function method completed.')
 
     return method_output

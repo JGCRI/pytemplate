@@ -12,7 +12,7 @@ import sphinx_rtd_theme
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'pytemplate'
-copyright = 'JGCRI'
+copyright = 'JGCRI 2023'
 author = 'JGCRI'
 release = '0.0.0'
 
