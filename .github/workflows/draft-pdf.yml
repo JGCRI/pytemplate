@@ -1,4 +1,9 @@
-on: [push]
+name: "paper"
+
+on: [push, pull_request]
+    branches:
+          - main
+          - dev
 
 jobs:
   paper:

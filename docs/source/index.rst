@@ -1,18 +1,17 @@
+:notoc:
 
-Welcome to pytemplate's documentation!
-======================================
+About
+=====
+In progress *bed* ..
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :hidden:
 
+   getting_started
+   user_guide
    modules
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   tests
+   contributing
+   license
+   acknowledgement

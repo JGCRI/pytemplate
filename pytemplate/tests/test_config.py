@@ -1,22 +1,26 @@
-import unittest
+# Import libraries
+import pytest
+import bed
 
-import numpy as np
+def test_fake():
+    """
+    test fake function
+    :return:
+    """
+    assert bed.fake() == True
 
-import pytemplate.config as cfg
+def test_fake2():
+    """
+    test fake2 function
+    :return:
+    """
+    assert bed.fake2() == True
 
-
-class TestConfig(unittest.TestCase):
-
-    COMP_ARRAY = np.array([1, 2, 3])
-
-    def test_fake(self):
-
-        result = cfg.fake()
-
-        self.assertEqual(True, result)
-
-        np.testing.assert_array_equal(TestConfig.COMP_ARRAY, np.array([1, 2, 3]))
-
-
-if __name__ == '__main__':
-    unittest.main()
+def test_class():
+    """
+    test class
+    :return:
+    """
+    a1 = bed.Bed()  # Coming from Model.py
+    a1.var1
+    assert a1.var1 == 0.125

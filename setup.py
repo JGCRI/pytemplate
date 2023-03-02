@@ -9,13 +9,13 @@ def readme():
         return f.read()
 
 
-version = re.search(r"__version__ = ['\"]([^'\"]*)['\"]", open('pytemplate/__init__.py').read(), re.M).group(1)
+version = re.search(r"__version__ = ['\"]([^'\"]*)['\"]", open('bed/__init__.py').read(), re.M).group(1)
 
 setup(
-    name='pytemplate',
+    name='bed',
     version=version,
     packages=find_packages(),
-    url='https://github.com/JGCRI/pytemplate',
+    url='https://github.com/JGCRI/bed',
     license='BSD-2-Clause',
     author='I.M. Human',
     author_email='i.human@machine.domain',
@@ -30,10 +30,14 @@ setup(
     ],
     extras_require={
         'dev': [
-            "sphinx>=5.1.1",
+            "pytest",
             "autodoc>=0.5.0",
             "twine>=4.0.1",
-            "ipykernel>=6.15.1"
+            "ipykernel>=6.15.1",
+            "sphinx>=4.0.2",
+            'sphinx-panels>=0.6.0',
+            'sphinx-rtd-theme>=0.5.2',
+            'sphinx-mathjax-offline>=0.0.1'
         ]
     }
 )
