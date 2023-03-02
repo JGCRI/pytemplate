@@ -25,15 +25,7 @@ setup(
     python_requires='>=3.8.*, <4',
     include_package_data=True,
     install_requires=[
-        "numpy>=1.23",
-        "PyYAML>=6",
-    ],
-    extras_require={
-        'dev': [
-            "sphinx>=5.1.1",
-            "autodoc>=0.5.0",
-            "twine>=4.0.1",
-            "ipykernel>=6.15.1"
-        ]
-    }
+        "esmpy>=8.2.0"
+
+    ]
 )
