@@ -26,7 +26,7 @@ setup(
     include_package_data=True,
     install_requires=[
         "pytest",
-        "pandas>1.5"
+        "pandas>1.5",
         "numpy>=1.23",
         "PyYAML>=6",
     ],
