@@ -1,60 +1,55 @@
 import os
 import zipfile
 import requests
-
-from pkg_resources import get_distribution
 from io import BytesIO as BytesIO
+from urllib.parse import urlparse
+from tqdm import tqdm
+import logging
 
 
-class InstallSupplement:
-    """Download and unpack example data supplement from Zenodo that matches the current installed distribution.
-    :param example_data_directory:              Full path to the directory you wish to install
-                                                example data to.  Must be write-enabled
-                                                for the user.
-    """
-
-    # URL for download link for zipped data on zenodo or github
-    DATA_VERSION_URLS = {'2.4.0': 'https://zenodo.org/record/2578287/files/example.zip?download=1'}
-
-    def __init__(self, example_data_directory):
-
-        # full path to the Xanthos root directory where the example dir will be stored
-        self.example_data_directory = example_data_directory
-
-    def fetch_data(self):
-        """Download and unpack the example data supplement for the
-        current distribution."""
-
-        # get the current version that is installed
-        current_version = get_distribution('xanthos').version
-
-        try:
-            data_link = InstallSupplement.DATA_VERSION_URLS[current_version]
-
-        except KeyError:
-            msg = "Link to data missing for current version:  {}.  Please contact admin."
-            raise(msg.format(current_version))
-
-        # retrieve content from URL
-        print("Downloading example data for current package version {}...".format(current_version))
-        r = requests.get(data_link)
-
-        with zipfile.ZipFile(BytesIO(r.content)) as zipped:
-
-            # extract each file in the zipped dir to the project
-            for f in zipped.namelist():
-                print("Unzipped: {}".format(os.path.join(self.example_data_directory, f)))
-                zipped.extract(f, self.example_data_directory)
-
-
-def get_package_data(folder=os.getcwd(), link = 'https://zenodo.org/record/2578287/files/example.zip?download=1'):
+def get_data(folder=os.path.join(os.getcwd(),'downloaded_data'), link='https://github.com/JGCRI/pytemplate/raw/dev/examples.zip'):
     """Download and unpack example data supplement from Zenodo current installed distribution.
     :param folder:              Full path to the folder to save data to
     :type folder:               str
     :param link:                Full path to data download link
     :type link:                 str
+    return                      save_path as a string
     """
 
-    # retrieve content from URL
-        print("Downloading example data for current package version {}...".format(current_version))
-        r = requests.get(data_link)
+    logging.info('Starting function get_data...')
+
+    # Check if folder exists
+    exists = os.path.exists(folder)
+    if not exists:
+        # Create a new directory because it does not exist
+        os.makedirs(folder)
+        logging.info(f'Created folder: {folder}.')
+
+
+    r = requests.get(link, stream=True)
+    file_name = os.path.basename((urlparse(link)).path)
+    save_path = os.path.join(folder, file_name)
+
+    # Progress bar and download
+    logging.info(f'Downloading file to {save_path}...')
+    total_size_in_bytes = int(r.headers.get('content-length', 0))
+    block_size = 1024  # 1 Kibibyte
+    progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
+    with open(save_path, 'wb') as file:
+        for data in r.iter_content(block_size):
+            progress_bar.update(len(data))
+            file.write(data)
+    progress_bar.close()
+    if total_size_in_bytes != 0 and progress_bar.n != total_size_in_bytes:
+        print("ERROR, something went wrong")
+    logging.info(f'File downloaded to {save_path}.')
+
+    if zipfile.is_zipfile(save_path):
+        with zipfile.ZipFile(save_path,'r') as zipped:
+            logging.info(f'Unzipping: {zipped} to folder: {os.path.abspath(folder)}...')
+            zipped.extractall(path=folder)
+            logging.info(f'Unzipping: {zipped} to folder: {os.path.abspath(folder)} complete.')
+
+    logging.info('Function get_data complete.')
+
+    return os.path.splitext(save_path)[0]

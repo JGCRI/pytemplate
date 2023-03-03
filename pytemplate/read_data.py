@@ -1,22 +1,20 @@
 import logging
+import pandas as pd
 
 
-def read_data(read_data_param_1=1,read_data_param_2=1.0):
-    """Example function read_data
+class Data:
+    """ Data class"""
 
-    :param read_data_param_1:                    Description of param (Units)
-    :type read_data_param_1:                     int
-    :param read_data_param_2:                    Description of param (Units)
-    :type read_data_param_2:                     int
+    def __init__(self, config=''):
+        """
+        :param config:         configuration file path
+        :type config:          yaml
+        :return:               Data
+        """
 
-    :return:                                    int output value
+        logging.info('Starting function read_config...')
 
-    """
+        self.config = config
 
-    logging.info('Starting function read_data.')
-
-    read_data_output = read_data_param_1 * read_data_param_2
-
-    logging.info('Function read_data completed.')
-
-    return read_data_output
+        if config != '':
+            self.example_data_set = pd.read_csv(config['path_example_data_set'])

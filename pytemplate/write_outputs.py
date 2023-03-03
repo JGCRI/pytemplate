@@ -1,27 +1,22 @@
 import logging
 
-def fake(fake_param: int = 1):
-    """Fake function to remove.
 
-    :param fake_param:                          A fake integer
-    :type fake_param:                           int
+def write_outputs(write_outputs_param_1=1,write_outputs_param_2=1.0):
+    """Example function write_outputs
 
-    :return:                                    boolean value
+    :param write_outputs_param_1:                    Description of param (Units)
+    :type write_outputs_param_1:                     int
+    :param write_outputs_param_2:                    Description of param (Units)
+    :type write_outputs_param_2:                     int
 
-    """
-
-    return True
-
-def fake2(fake_param: int = 1):
-    """Fake function to remove.
-
-    :param fake_param:                          A fake integer
-    :type fake_param:                           int
-
-    :return:                                    boolean value
+    :return:                                    int output value
 
     """
 
-    logging.info('This is a log file for fake 2')
+    logging.info('Starting function write_outputs.')
 
-    return True
+    write_outputs_output = write_outputs_param_1 * write_outputs_param_2
+
+    logging.info('Function write_outputs completed.')
+
+    return write_outputs_output

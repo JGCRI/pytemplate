@@ -6,5 +6,7 @@ from .diagnostics import *
 from .clean_up import *
 from .tests.test_package import *
 from .logger import *
+from .write_outputs import *
+from .get_data import *
 
-__version__ = "0.0.0"
+__version__ = "1.0.0"

@@ -1,7 +1,8 @@
 import os
+import yaml
 import logging
 
-def read_config(config_file="example_config.yml"):
+def read_config(config_file=""):
     """
     Read configuration file.
 
@@ -14,8 +15,20 @@ def read_config(config_file="example_config.yml"):
 
     path_to_config = os.path.abspath(config_file)
     file_exists = os.path.exists(path_to_config)
-    logging.info(f'config_file {path_to_config} exists: {file_exists}')
+
+
+    if file_exists:
+        is_file = os.path.isfile(path_to_config)
+        if is_file:
+            with open(path_to_config, "r") as stream:
+                try:
+                    config = yaml.safe_load(stream)
+                except yaml.YAMLError as exc:
+                    print(exc)
+        else:
+            config = config_file
+            logging.error(f'Config file provided: {path_to_config} is not a valid file.')
 
     logging.info('Function read_config complete.')
 
-    return path_to_config
+    return config

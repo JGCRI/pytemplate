@@ -5,7 +5,7 @@ import logging
 class Pytemplate:
     """ Model wrapper for pytemplate"""
 
-    def __init__(self, config_file="example_config.yml"):
+    def __init__(self, config_file=""):
 
         logging.info('Starting Pytemplate model.')
 
