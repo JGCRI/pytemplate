@@ -26,7 +26,7 @@ setup(
     include_package_data=True,
     install_requires=[
         "pytest",
-        "tqdm"
+        "tqdm",
         "requests",
         "pandas>1.5",
         "numpy>=1.23",

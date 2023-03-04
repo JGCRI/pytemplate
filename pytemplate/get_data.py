@@ -1,7 +1,6 @@
 import os
 import zipfile
 import requests
-from io import BytesIO as BytesIO
 from urllib.parse import urlparse
 from tqdm import tqdm
 import logging
