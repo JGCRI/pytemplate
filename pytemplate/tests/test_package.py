@@ -8,7 +8,7 @@ def test_get_data():
     test clean_up function
     :return:
     """
-    assert os.path.abspath(pytemplate.get_data()) == os.path.abspath(os.path.join(os.getcwd(),'downloaded_data\\examples'))
+    assert os.path.abspath(pytemplate.get_data()) == os.path.abspath(os.path.join(os.getcwd(),'downloaded_data/examples'))
 
 def test_read_config():
     """
