@@ -28,6 +28,9 @@ def read_config(config_file=""):
         else:
             config = config_file
             logging.error(f'Config file provided: {path_to_config} is not a valid file.')
+    else:
+        config = config_file
+        logging.error(f'Config file provided: {path_to_config} is not a valid file.')
 
     logging.info('Function read_config complete.')
 

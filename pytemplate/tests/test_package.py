@@ -2,7 +2,6 @@
 import pytest
 import pytemplate
 import os
-import pandas as pd
 
 def test_get_data():
     """

@@ -24,8 +24,18 @@ def get_data(folder=os.path.join(os.getcwd(),'downloaded_data'), link='https://g
         os.makedirs(folder)
         logging.info(f'Created folder: {folder}.')
 
+    try:
+        r = requests.get(link, stream=True)
+        r.raise_for_status()
+    except requests.exceptions.RequestException as err:
+        logging.error(err)
+    except requests.exceptions.HTTPError as errh:
+        logging.error(f"Http Error: {errh}")
+    except requests.exceptions.ConnectionError as errc:
+        logging.error(f"Error Connecting: {errc}")
+    except requests.exceptions.Timeout as errt:
+        logging.error(f"Timeout Error: {errt}")
 
-    r = requests.get(link, stream=True)
     file_name = os.path.basename((urlparse(link)).path)
     save_path = os.path.join(folder, file_name)
 
