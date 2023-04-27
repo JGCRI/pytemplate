@@ -16,7 +16,6 @@ def read_config(config_file=""):
     path_to_config = os.path.abspath(config_file)
     file_exists = os.path.exists(path_to_config)
 
-
     if file_exists:
         is_file = os.path.isfile(path_to_config)
         if is_file:
