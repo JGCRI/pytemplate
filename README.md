@@ -77,7 +77,7 @@ Update each of the following files to generate clean, clear documentation. When 
 - docs\source\tests.rst
 - docs\source\user_guide.rst
 
-Once your docs github action is complete (see below) you need to follow the following steps to get your documentation page live online:
+Once your GitHub action for docs is complete (see section 6 GitHub Actions) you need the following steps to get your documentation page live online:
 
 <br>
 <br>
@@ -104,7 +104,7 @@ The final piece is to check your GitHub actions for continuous integration. Thes
 <br>
 <br>
 
-The final step is to add your badges to your repository as follows. Simple replace "pytemplate" with your own repo name in the following three badges:
+The final step is to add your badges to your repository as follows. Simply replace "pytemplate" with your own repo name in the following three badges and then paste these at the top of the README.md file and push:
 
 ```
 [![build](https://github.com/JGCRI/pytemplate/actions/workflows/build.yml/badge.svg)](https://github.com/JGCRI/pytemplate/actions/workflows/build.yml)
