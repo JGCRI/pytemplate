@@ -1,6 +1,6 @@
 User Guide
 ===============
-This page walks you through the steps of installing **tethys** and running an example.
+This page walks you through the steps of installing **pytemplate** and running an example.
 
 Motivation
 ----------
