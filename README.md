@@ -7,13 +7,20 @@
 
 `pytemplate` is a template for creating a basic Python package with Continuous Integration (CI) via GitHub actions in the following steps:
 
+<br>
+<br>
+
 [![pytemplate_build_your_own_package](extras/pytemplate_build_your_own_package.png)](https://raw.githubusercontent.com/JGCRI/pytemplate/dev/extras/pytemplate_build_your_own_package.png)
 
+<br>
+<br>
 
 The folder structure is as shown below:
 
 [![pytemplate_package_structure](extras/pytemplate_package_structure.png)](https://raw.githubusercontent.com/JGCRI/pytemplate/dev/extras/pytemplate_package_structure.png)
 
+<br>
+<br>
 
 # 1 Clone or Copy
 
@@ -69,8 +76,13 @@ Update each of the following files to generate clean, clear documentation. When 
 
 Once your docs github action is complete (see below) you need to follow the following steps to get your documentation page live online:
 
+<br>
+<br>
+
 [![pytemplate_package_structure](extras/pytemplate_activate_docs.png)](https://raw.githubusercontent.com/JGCRI/pytemplate/dev/extras/pytemplate_activate_docs.png)
 
+<br>
+<br>
 
 # 6 Github Actions
 
@@ -81,7 +93,13 @@ The final piece is to check your GitHub actions for continuous integration. Thes
 - .github\workflows\draft-pdf.yml (Automatically builds a JOSS version of a software paper from the paper folder. You can update paper.md file if you plan to publish your model.)
 - .github\workflows\test.yml (Runs your tests and check what percentage is covered on codecov. You will need to connect your repository to codecoverage for this to work as shown below.)
 
+<br>
+<br>
+
 [![pytemplate_package_structure](extras/pytemplate_activate_docs.png)](https://raw.githubusercontent.com/JGCRI/pytemplate/dev/extras/pytemplate_activate_docs.png)
+
+<br>
+<br>
 
 The final step is to add your badges to your repository as follows. Simple replace "pytemplate" with your own repo name in the following three badges:
 
