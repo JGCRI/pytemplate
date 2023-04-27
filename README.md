@@ -17,6 +17,9 @@
 
 The folder structure is as shown below:
 
+<br>
+<br>
+
 [![pytemplate_package_structure](extras/pytemplate_package_structure.png)](https://raw.githubusercontent.com/JGCRI/pytemplate/dev/extras/pytemplate_package_structure.png)
 
 <br>
@@ -96,7 +99,7 @@ The final piece is to check your GitHub actions for continuous integration. Thes
 <br>
 <br>
 
-[![pytemplate_package_structure](extras/pytemplate_activate_docs.png)](https://raw.githubusercontent.com/JGCRI/pytemplate/dev/extras/pytemplate_activate_docs.png)
+[![pytemplate_codecov](extras/pytemplate_codecov.png)](https://raw.githubusercontent.com/JGCRI/pytemplate/dev/extras/pytemplate_codecov.png)
 
 <br>
 <br>
