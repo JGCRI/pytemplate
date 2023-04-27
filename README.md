@@ -25,7 +25,7 @@ The folder structure is as shown below:
 <br>
 <br>
 
-# 1 Clone or Copy
+# 1 Clone or "Use this template"
 
 Navigate directly to https://github.com/JGCRI/pytemplate, click the shiny green button that says `Use this template` and be on your way.
 
