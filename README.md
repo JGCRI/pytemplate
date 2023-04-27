@@ -15,7 +15,7 @@
 
 The folder structure is as shown below:
 
-![pytemplate_package_structure](extras/pytemplate_package_structure.png)
+[![pytemplate_package_structure](extras/pytemplate_package_structure.png)](https://raw.githubusercontent.com/JGCRI/pytemplate/dev/extras/pytemplate_package_structure.png)
 
 
 # 1 Clone or Copy
@@ -66,7 +66,7 @@ Update each of the following files to generate clean, clear documentation. When 
 
 Once your docs github action is complete (see below) you need to follow the following steps to get your documentation page live online:
 
-![pytemplate_package_structure](extras/pytemplate_activate_docs.png)
+[![pytemplate_package_structure](extras/pytemplate_activate_docs.png)](https://raw.githubusercontent.com/JGCRI/pytemplate/dev/extras/pytemplate_activate_docs.png)
 
 
 # 4 Github Actions
