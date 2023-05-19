@@ -12,9 +12,11 @@ class Data:
         :return:               Data
         """
 
-        logging.info('Starting function read_config...')
+        logging.info('Starting to build Data class object from read_data.py...')
 
         self.config = config
 
         if config != '':
             self.example_data_set = pd.read_csv(config['path_example_data_set'])
+
+        logging.info('Data class object built from read_data.py.')
