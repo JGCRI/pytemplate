@@ -1,4 +1,5 @@
 from pytemplate.read_config import read_config
+from pytemplate.read_data import Data
 from pytemplate.method import method
 import logging
 
@@ -15,7 +16,7 @@ class Pytemplate:
         self.config = read_config(config_file)
 
         # Read data
-        # self.data = read_data(self.config)
+        #self.data = Data(self.config)
 
         # Run main method
         self.method = method()
