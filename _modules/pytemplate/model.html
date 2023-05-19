@@ -6,8 +6,8 @@
   <title>pytemplate.model &mdash; pytemplate 0.0.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -77,6 +77,7 @@
              
   <h1>Source code for pytemplate.model</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">pytemplate.read_config</span> <span class="kn">import</span> <span class="n">read_config</span>
+<span class="kn">from</span> <span class="nn">pytemplate.read_data</span> <span class="kn">import</span> <span class="n">Data</span>
 <span class="kn">from</span> <span class="nn">pytemplate.method</span> <span class="kn">import</span> <span class="n">method</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 
@@ -93,7 +94,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">read_config</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
 
         <span class="c1"># Read data</span>
-        <span class="c1"># self.data = read_data(self.config)</span>
+        <span class="c1">#self.data = Data(self.config)</span>
 
         <span class="c1"># Run main method</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span><span class="p">()</span>
